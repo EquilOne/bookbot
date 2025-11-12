@@ -12,3 +12,7 @@ def get_num_chars(string):
         else:
             char_count[char] += 1
     return char_count
+
+
+def sort_on(items):
+    return items["char"]
