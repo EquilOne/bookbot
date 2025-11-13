@@ -29,4 +29,3 @@ char_list = get_char_list(char_count_dict)
 char_list.sort(reverse=True, key=sort_on)
 
 print_report()
-# print(f"{char_list[0]['char']}: {char_list[0]['num']}")
