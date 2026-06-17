@@ -1,8 +1,6 @@
 import sys
-from stats import count_words
-from stats import get_num_chars
-from stats import get_char_list
-from stats import sort_on
+
+from stats import count_words, get_char_list, get_num_chars, sort_on
 
 
 def run_book_bot(path_to_book):
@@ -32,7 +30,7 @@ def print_report(path_to_book, word_count, list):
     print(f"Found {word_count} total words\n")
     print("------------- Character Count -------------\n")
     for item in list:
-        print(f"{item['char']}: {item['num']}")
+        print(f"{item[0]}: {item[1]}")
 
 
 if len(sys.argv) != 2:
@@ -40,3 +38,5 @@ if len(sys.argv) != 2:
     sys.exit(1)
 else:
     run_book_bot(sys.argv[1])
+
+run_book_bot("books/frankenstein.txt")
